@@ -5,8 +5,9 @@ public class EarthReposition : MonoBehaviour
 {
     [Header("Earth Position Settings")]
     public float targetZPosition = -10f;
-    public float moveSpeed = 0.5f; // Units per second
+    public float moveSpeed = 0.5f;
     
+    // Im using this to store the start position of the Earth and then destory it, since it wont be in view
     private Vector3 startPosition;
     private bool isMoving = false;
     
