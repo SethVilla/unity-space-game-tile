@@ -254,6 +254,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2874697532619063091, guid: 97dc654423c2a4c26a08b549615613e5, type: 3}
+      propertyPath: spinParent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3201984995984725254, guid: 97dc654423c2a4c26a08b549615613e5, type: 3}
       propertyPath: m_Name
       value: EarthMedium
@@ -313,7 +317,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3201984995984725254, guid: 97dc654423c2a4c26a08b549615613e5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1472263810}
   m_SourcePrefab: {fileID: 100100000, guid: 97dc654423c2a4c26a08b549615613e5, type: 3}
 --- !u!1 &688634733
 GameObject:
@@ -561,6 +568,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1472263807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3201984995984725254, guid: 97dc654423c2a4c26a08b549615613e5, type: 3}
+  m_PrefabInstance: {fileID: 412449320}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1472263810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472263807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed333e57580348bc8ad42fce31aff9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EarthSpin
+  targetZPosition: -10
+  moveSpeed: 0.5
 --- !u!1001 &1615448041
 PrefabInstance:
   m_ObjectHideFlags: 0

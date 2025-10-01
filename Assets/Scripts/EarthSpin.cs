@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EarthReposition : MonoBehaviour
+public class EarthSpin : MonoBehaviour
 {
     [Header("Earth Position Settings")]
     public float earthZPosition = -10f;
@@ -11,8 +11,5 @@ public class EarthReposition : MonoBehaviour
         Vector3 currentPosition = transform.position;
         currentPosition.z = earthZPosition;
         transform.position = currentPosition;
-        
-        // Destroy the Earth object when it reaches the target Z position
-        Destroy(gameObject);
     }
 }
