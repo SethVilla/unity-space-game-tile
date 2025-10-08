@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EarthSpin
   targetZPosition: -10
-  moveSpeed: 0.5
+  moveSpeed: 0.25
 --- !u!1001 &1615448041
 PrefabInstance:
   m_ObjectHideFlags: 0
