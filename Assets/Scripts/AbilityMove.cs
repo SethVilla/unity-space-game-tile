@@ -3,7 +3,7 @@ using UnityEngine;
 public class AbilityMove : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed = 2f;
     
     // Extra distance before destroying object
     private Camera mainCamera;
