@@ -7,7 +7,7 @@ public class AbilityMove : MonoBehaviour
     
     // Extra distance before destroying object
     private Camera mainCamera;
-    private float boundsBuffer = 2f;
+    private float boundsBuffer = 5f;
     
     private void Start()
     {
@@ -40,8 +40,8 @@ public class AbilityMove : MonoBehaviour
             float bottomBound = -cameraSize - boundsBuffer;
 
             // Buffer
-            float frontBound = cameraZ + 10f + boundsBuffer;
-            float backBound = cameraZ - 10f - boundsBuffer;
+            float frontBound = cameraZ  + boundsBuffer;
+            float backBound = cameraZ  - boundsBuffer;
             
             Vector3 pos = transform.position;
             

@@ -37,7 +37,7 @@ public class GameTileSpacePods : MonoBehaviour
             // Spawn space pods within the game tile bounds (7.5 x 10 x 10)
             Vector3 localPos = new Vector3(
                 Random.Range(-3.75f, 3.75f), // Within tile width (7.5/2 = 3.75)
-                Random.Range(-4.5f, 4.5f), // Within tile height (10/2 = 5, but use ±4.5 for safety)
+                0f, // Keep at tile center (world y = 5)
                 Random.Range(-5f, 5f) // Within tile depth (10/2 = 5)
             );
 

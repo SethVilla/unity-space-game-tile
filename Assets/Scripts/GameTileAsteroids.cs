@@ -35,27 +35,11 @@ public class GameTileAsteroids : MonoBehaviour
         {
             GameObject prefab = rockPrefabs[Random.Range(0, rockPrefabs.Length)];
 
-            // Create depth by spawning asteroids at different Y levels within the tile
-            float yPosition;
-            float scale;
-            
-            if (i < numberOfAsteroids / 2)
-            {
-                // Close asteroids (near center of tile)
-                yPosition = Random.Range(-0.02f, 0.02f); // Very close to tile center (Y=0)
-                scale = 0.02f; // Larger for close asteroids
-            }
-            else
-            {
-                // Far asteroids (near edges of tile)
-                yPosition = Random.Range(-4.5f, 4.5f); // Near tile edges (tile height is 10, so ±5)
-                scale = 0.02f; // Same scale for visibility
-            }
-
             // Spawn asteroids within the game tile bounds (7.5 x 10 x 10)
+            float scale = 0.02f;
             Vector3 localPos = new Vector3(
                 Random.Range(-3.75f, 3.75f), // Within tile width (7.5/2 = 3.75)
-                yPosition, // Different Y levels for depth
+                0f, // Keep at tile center (world y = 5)
                 Random.Range(-5f, 5f) // Within tile depth (10/2 = 5)
             );
 

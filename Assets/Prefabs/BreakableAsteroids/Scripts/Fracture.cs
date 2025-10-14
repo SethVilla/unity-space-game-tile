@@ -6,10 +6,15 @@ public class Fracture : MonoBehaviour
 {
     [Tooltip("\"Fractured\" is the object that this will break into")]
     public GameObject fractured;
-
+ 
     public void FractureObject()
     {
-        Instantiate(fractured, transform.position, transform.rotation); //Spawn in the broken version
-        Destroy(gameObject); //Destroy the object to stop it getting in the way
+        GameObject fracturedInstance = Instantiate(fractured, transform.position, transform.rotation);
+        fracturedInstance.transform.localScale = transform.localScale * 10f;
+        
+        // Destroy the fractured debris after 2 seconds
+        Destroy(fracturedInstance, 2f);
+        
+        Destroy(gameObject);
     }
 }
