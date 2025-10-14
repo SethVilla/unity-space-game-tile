@@ -6,13 +6,27 @@ public class MissileCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        // Check if we hit an asteroid
         if (collision.gameObject.CompareTag("Asteroid"))
         {
-            Debug.Log("Missile hit for " + damage + " damage.");
-            collision.gameObject.GetComponent<AsteroidCollision>().TakeDamage(damage);
-            
-            // Destroy the missile after hitting
-            Destroy(gameObject);
+            AsteroidCollision asteroidScript = collision.gameObject.GetComponent<AsteroidCollision>();
+            if (asteroidScript != null)
+            {
+                Debug.Log("Missile hit asteroid for " + damage + " damage.");
+                asteroidScript.TakeDamage(damage);
+                Destroy(gameObject); // Destroy the missile after hitting
+            }
+        }
+        // Check if we hit a space pod
+        else if (collision.gameObject.CompareTag("Space Pod"))
+        {
+            SpacePodCollision spacePodScript = collision.gameObject.GetComponent<SpacePodCollision>();
+            if (spacePodScript != null)
+            {
+                Debug.Log("Missile hit space pod for " + damage + " damage.");
+                spacePodScript.TakeDamage(damage);
+                Destroy(gameObject); // Destroy the missile after hitting
+            }
         }
     }
 }
