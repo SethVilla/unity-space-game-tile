@@ -75,43 +75,16 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-# Large files that should be tracked with Git LFS
-*.dae
-*.fbx
-*.obj
-*.blend
-*.3ds
-*.max
-*.ma
-*.mb
-*.c4d
-*.dwg
-*.dxf
-*.psd
-*.ai
-*.tga
-*.tiff
-*.tif
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.exr
-*.hdr
-*.wav
-*.mp3
-*.ogg
-*.aiff
-*.flac
-*.m4a
-*.wma
-*.mp4
-*.mov
-*.avi
-*.mkv
-*.webm
-*.dylib
-*.so
-*.dll
+# Executables (still ignore these)
 *.exe
+
+# Note: Large binary files should be tracked with Git LFS
+# Run these commands to set up Git LFS for Unity:
+# git lfs install
+# git lfs track "*.psd"
+# git lfs track "*.fbx"
+# git lfs track "*.png"
+# git lfs track "*.jpg"
+# git lfs track "*.wav"
+# git lfs track "*.mp3"
+# git lfs track "*.mp4"

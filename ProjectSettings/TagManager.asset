@@ -5,10 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Asteroid
-  - Space Pods
   - Ability One
   - Ability Two
   - Renegade
+  - Space Pod
   layers:
   - Default
   - TransparentFX
